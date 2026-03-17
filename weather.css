@@ -1,0 +1,81 @@
+body{
+margin:0;
+font-family:Arial;
+background:#1e2b6f;
+color:white;
+text-align:center;
+}
+
+.title{
+margin-top:20px;
+}
+
+.main{
+display:flex;
+justify-content:center;
+gap:30px;
+margin-top:30px;
+}
+
+.card{
+background:white;
+color:black;
+width:350px;
+padding:20px;
+border-radius:10px;
+text-align:left;
+}
+
+.search{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+input{
+flex:1;
+padding:8px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+button{
+background:#ff7a30;
+border:none;
+color:white;
+padding:8px 15px;
+border-radius:5px;
+cursor:pointer;
+}
+
+#history span{
+background:#ff7a30;
+color:white;
+padding:5px 12px;
+border-radius:20px;
+margin-right:5px;
+font-size:14px;
+}
+
+.info div{
+display:flex;
+justify-content:space-between;
+border-left:3px solid #ff7a30;
+padding:8px;
+margin:8px 0;
+background:#f4f4f4;
+}
+
+.console{
+background:#0f1c54;
+width:760px;
+margin:30px auto;
+padding:20px;
+border-radius:10px;
+text-align:left;
+}
+
+pre{
+color:#9bd3ff;
+font-size:14px;
+}
