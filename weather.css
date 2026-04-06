@@ -1,81 +1,69 @@
 body{
-margin:0;
-font-family:Arial;
-background:#1e2b6f;
+font-family: Arial;
+background:#202c63;
 color:white;
 text-align:center;
 }
 
-.title{
-margin-top:20px;
+h1{
+margin:20px;
 }
 
-.main{
+.container{
 display:flex;
 justify-content:center;
 gap:30px;
-margin-top:30px;
+margin:30px;
 }
 
 .card{
-background:white;
+background:#f2f2f2;
 color:black;
-width:350px;
 padding:20px;
+width:350px;
 border-radius:10px;
 text-align:left;
 }
 
-.search{
-display:flex;
-gap:10px;
-margin-bottom:20px;
-}
-
 input{
-flex:1;
 padding:8px;
-border:1px solid #ccc;
-border-radius:5px;
+width:70%;
 }
 
 button{
-background:#ff7a30;
+padding:8px 15px;
+background:orange;
 border:none;
 color:white;
-padding:8px 15px;
 border-radius:5px;
 cursor:pointer;
 }
 
-#history span{
-background:#ff7a30;
-color:white;
-padding:5px 12px;
-border-radius:20px;
-margin-right:5px;
-font-size:14px;
+.info{
+background:#ddd;
+margin:10px 0;
+padding:8px;
+border-left:4px solid orange;
 }
 
-.info div{
-display:flex;
-justify-content:space-between;
-border-left:3px solid #ff7a30;
-padding:8px;
-margin:8px 0;
-background:#f4f4f4;
+#history span{
+background:orange;
+color:white;
+padding:5px 10px;
+margin:5px;
+border-radius:20px;
+display:inline-block;
 }
 
 .console{
-background:#0f1c54;
-width:760px;
+background:#0f1a45;
 margin:30px auto;
+width:80%;
 padding:20px;
 border-radius:10px;
 text-align:left;
 }
 
-pre{
-color:#9bd3ff;
-font-size:14px;
+#log{
+font-family:monospace;
 }

@@ -3,65 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <title>Async Weather Tracker</title>
-<link rel="stylesheet" href="weather.css">
+<link rel="stylesheet" href="weather
+.css">
 </head>
 
 <body>
 
-<h1 class="title">⛅ Async Weather Tracker</h1>
+<h1>🌤 Async Weather Tracker</h1>
 
-<div class="main">
+<div class="container">
 
-<!-- LEFT CARD -->
 <div class="card">
 
 <h3>Search City</h3>
 
-<div class="search">
-<input id="cityInput" placeholder="Indore">
+<input type="text" id="cityInput" placeholder="Enter city">
 <button onclick="getWeather()">Search</button>
-</div>
 
 <h3>Search History</h3>
-
-<div id="history">
-<span>Indore</span>
-<span>Delhi</span>
-</div>
+<div id="history"></div>
 
 </div>
 
-<!-- RIGHT CARD -->
+
 <div class="card">
 
 <h3>Weather Info</h3>
 
-<div class="info">
-<div>City <span id="city">Indore, IN</span></div>
-<div>Temp <span id="temp">21.1 °C</span></div>
-<div>Weather <span id="weather">Haze</span></div>
-<div>Humidity <span id="humidity">52%</span></div>
-<div>Wind <span id="wind">5.14 m/s</span></div>
-</div>
+<div class="info">City : <span id="city"></span></div>
+<div class="info">Temp : <span id="temp"></span></div>
+<div class="info">Weather : <span id="weather"></span></div>
+<div class="info">Humidity : <span id="humidity"></span></div>
+<div class="info">Wind : <span id="wind"></span></div>
 
 </div>
 
 </div>
 
-<!-- CONSOLE -->
+
 <div class="console">
-
 <h3>Console – Event Loop</h3>
-
-<pre id="consoleBox">
-1 Sync Start
-2 Sync End
-[ASYNC] Start fetching
-Promise.then (Microtask)
-setTimeout (Macrotask)
-[ASYNC] Data received
-</pre>
-
+<div id="log"></div>
 </div>
 
 <script src="weather.js"></script>
