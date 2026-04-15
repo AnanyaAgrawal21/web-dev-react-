@@ -1,58 +1,67 @@
-import React from "react";
-
-function Menu(props) {
-  return (
-    <>
-      <div>Menu</div>
-
-      <ul>
-        <li>Entertainment</li>
-        <li>Politics</li>
-        <li>Tech</li>
-      </ul>
-
-      <button
-        className="counter"
-        onClick={() => props.setCount((count) => count + 1)}
-      >
-        Count is {props.count}
-      </button>
-    </>
-  );
-}
-
-export default Menu;
-
 import React, { Component } from "react";
 
-export default class Menu extends Component {
+class Menu extends Component {
 
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
+
+    this.state = {
+      count: 0
+    };
   }
+
+  componentDidMount() {
+    console.log("component mounted");
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.count === 1) {
+      return false;
+    }
+
+    console.log("should component update");
+    return true;
+  }
+
+  componentDidUpdate() {
+    console.log("component did update");
+  }
+
+  componentWillUnmount() {
+    console.log("component will unmount");
+  }
+
+  handleIncrement = () => {
+    this.setState({ count: this.state.count + 1 });
+  };
 
   render() {
     return (
-      <>
-        <div>Menu</div>
+      <div>
+        <h1>Menu</h1>
 
-        <ol>
+        <ul>
           <li>Entertainment</li>
           <li>Politics</li>
           <li>Tech</li>
-        </ol>
+        </ul>
+
+        <h2>{this.state.count}</h2>
 
         <button
-          className="counter"
-          onClick={() => this.props.setCount(this.props.count + 1)}
+          style={{
+            backgroundColor: "blue",
+            color: "white",
+            width: "100px",
+            height: "30px"
+          }}
+          onClick={this.handleIncrement}
         >
-          Count is {this.props.count}
+          Click
         </button>
-      </>
+      </div>
     );
   }
 }
 
-
-
-
+export default Menu;
